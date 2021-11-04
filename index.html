@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/misFunciones.js"></script>
+    <title>Reto3</title>
+    <style>
+        .fondo {
+            background-color: rgb(181, 127, 231);
+        }
+
+        .btn {
+            background-color: rgb(220, 20, 170);
+
+        }
+
+        input {
+            border-color: black;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body class="fondo">
+    <!--Tabla Categorias-->
+    <h1> Categorias</h1>
+    <div id="resultado1"></div>
+    <button onclick="traerInformacionCategorias()" class="btn"> Consultar Categorias</button>
+
+    <div>
+        <input type="text" id="Cname" placeholder="name">
+        <input type="text" id="Cdescription" placeholder="description">
+
+
+    </div>
+    <button onclick="guardarInformacionCategorias()" class="btn">Guardar Categorias</button>
+
+    <!--Tabla Cabañas-->
+    <h1> Cabañas</h1>
+    <div id="resultado2"></div>
+    <button onclick="traerInformacionCabins()" class="btn"> Consultar Cabañas</button>
+    </div>
+
+
+    <div>
+        <input type="text" id="Cbname" placeholder="name">
+        <input type="text" id="Cbbrand" placeholder="brand"><br>
+        <input type="number" id="Cbrooms" placeholder="rooms">
+        <input type="text" id="Cbdescription" placeholder="description"><br>
+
+        <button onclick="guardarInformacionCabins()" class="btn">Guardar Cabins</button>
+
+        <!--Tabla Clientes-->
+        <h1> Clientes</h1>
+        <div id="resultado3"></div>
+        <button onclick="traerInformacionClientes()" class="btn"> Consultar Clientes</button>
+
+        <div>
+            <input type="text" id="Clemail" placeholder="Correo">
+            <input type="text" id="Clpassword" placeholder="Contraseña"><br>
+            <input type="text" id="Clname" placeholder="Nombre">
+            <input type="number" id="Clage" placeholder="Edad">
+        </div>
+        <button onclick="guardarInformacionClientes()" class="btn">Guardar Clientes</button>
+
+        <h1> Mensajes</h1>
+        <div id="resultado4"></div>
+        <button onclick="traerInformacionMensajes()" class="btn"> Consultar Mensajes</button>
+
+        <div>
+            <input type="text" id="messageText" placeholder="Mensaje">
+        </div>
+        <button onclick="guardarInformacionMensajes()" class="btn">Guardar Mensajes</button>
+
+        <h1> Reservaciones</h1>
+        <div id="resultado5"></div>
+        <button onclick="traerInformacionReservaciones()" class="btn"> Consultar Reservaciones</button>
+
+        <div>
+            <input type="date" id="startDate" placeholder="DD/MM/AA">
+            <input type="date" id="devolutionDate" placeholder="DD/MM/AA">
+            <input class="controlReservation" type="text" id="status"
+                placeholder="escriba completed o cancelled para el estado de la Reservacion ">
+
+        </div>
+        <button onclick="guardarInformacionReservaciones()" class="btn">Guardar Reservaciones</button>
+</body>
+
+</html>
